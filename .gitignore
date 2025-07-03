@@ -29,11 +29,6 @@ Thumbs.db
 *.db
 *.sqlite
 
-# Images - Not sharing actual product images
-frontend/public/images/
-!frontend/public/images/README.md
-!frontend/public/images/RESIM-REHBERI.md
-
 # Bower dependency directory (https://bower.io/)
 bower_components
 
@@ -165,3 +160,12 @@ Thumbs.db
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
+
+# Images - Private files not to be shared
+/frontend/public/images/
+!/frontend/public/images/README.md
+!/frontend/public/images/RESIM-REHBERI.md
+
+# Keep placeholder images folder structure
+/frontend/public/images/*
+!/frontend/public/images/.gitkeep

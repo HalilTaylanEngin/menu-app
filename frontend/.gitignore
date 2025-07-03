@@ -12,11 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Images - Not sharing actual product images
-public/images/
-!public/images/README.md
-!public/images/RESIM-REHBERI.md
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

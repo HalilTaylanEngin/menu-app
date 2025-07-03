@@ -1,207 +1,110 @@
-# 🍽️ Modern Restaurant Menu App
+# Menu App - MERN Stack Project
 
-[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-20.x-green)](https://nodejs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-7.x-green)](https://mongodb.com/)
-[![Express](https://img.shields.io/badge/Express-4.x-lightgrey)](https://expressjs.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-blue)](https://tailwindcss.com/)
+A modern restaurant menu application built with the MERN stack (MongoDB, Express.js, React, Node.js).
 
-A modern, responsive restaurant menu application built with the MERN stack. Features include menu management, user authentication, admin panel, and real-time updates.
+## 🚀 Project Status - Branch2
 
-## 🌟 Features
+This branch includes significant improvements and new features compared to the main branch.
 
-### ✅ **Completed Features (v2.0 - Branch2)**
+### ✅ **NEW in Branch2**
+- **🎨 Advanced UI/UX**: Complete redesign with modern components
+- **🖼️ Real Image System**: Production-ready image management with fallbacks
+- **⚡ Redux State Management**: Full Redux integration for menu and cart
+- **🔧 Admin Panel**: Complete menu management system with CRUD operations
+- **🎯 Smart Filtering**: Advanced search and category filtering
+- **🌓 Theme System**: Dark/Light mode with persistent preferences
+- **💾 LocalStorage**: User preferences saved across sessions
+- **📱 Mobile-First**: Responsive design optimized for all devices
+- **🧹 Clean Architecture**: Production-ready codebase without dev utilities
 
-#### 🎨 **Frontend Features**
-- **Modern UI/UX**: Clean, mobile-first design with Tailwind CSS
-- **Dark/Light Theme**: Seamless theme switching with context management
-- **Responsive Design**: Optimized for all device sizes
-- **Menu Browsing**: Category filtering, search functionality
-- **Image Management**: Real image support with fallback system
-- **State Management**: Redux for efficient data handling
-- **Smooth Animations**: Framer Motion for enhanced UX
+### ✅ Current Features
+- **Frontend**: React with Redux, Tailwind CSS, Framer Motion
+- **Backend**: Express.js API with MongoDB integration
+- **Authentication**: JWT-based user authentication
+- **Menu Management**: Full CRUD operations with image management
+- **User Roles**: Admin and regular user roles
+- **API Validation**: Input validation and error handling
+- **Real-time Updates**: Live menu updates with Redux
+- **Search & Filter**: Advanced filtering by category and search terms
 
-#### ⚙️ **Backend Features**
-- **REST API**: Complete CRUD operations for menu management
-- **Authentication**: JWT-based secure authentication
-- **Database**: MongoDB with Mongoose ODM
-- **Validation**: Input validation and error handling
-- **CORS**: Cross-origin resource sharing configuration
+## 📋 **Setup Instructions**
 
-#### 🔧 **Admin Panel**
-- **Menu Management**: Add, edit, delete, and toggle menu items
-- **User Preferences**: Persistent filter settings with localStorage
-- **Image Selector**: Built-in image selection with category organization
-- **Real-time Updates**: Instant menu updates without page refresh
-
-#### 🚀 **Performance & Quality**
-- **Production Ready**: Clean, optimized codebase
-- **No Dev Dependencies**: Removed all development-only utilities
-- **Error Handling**: Comprehensive error management
-- **Loading States**: Smooth loading indicators
-
-### 📂 **Project Structure**
-
-```
-menu-app/
-├── backend/                 # Express.js API server
-│   ├── middleware/         # Authentication & validation
-│   ├── models/            # MongoDB models
-│   ├── routes/            # API routes
-│   └── server.js          # Server entry point
-│
-├── frontend/              # React application
-│   ├── public/           # Static assets
-│   │   └── images/       # Product images (not included in repo)
-│   ├── src/
-│   │   ├── components/   # Reusable UI components
-│   │   ├── pages/        # Page components
-│   │   ├── store/        # Redux store & slices
-│   │   ├── context/      # React context providers
-│   │   ├── utils/        # Utility functions
-│   │   └── constants/    # Theme & configuration
-│   └── package.json
-│
-└── README.md
-```
-
-## 🛠️ **Tech Stack**
-
-### **Frontend**
-- **React 18** - Modern UI framework with hooks
-- **Vite** - Fast build tool and dev server
-- **Redux Toolkit** - State management
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **React Router** - Client-side routing
-- **React Icons** - Icon library
-
-### **Backend**
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - MongoDB ODM
-- **JWT** - Authentication tokens
-- **bcryptjs** - Password hashing
-- **CORS** - Cross-origin resource sharing
-
-## 🚀 **Quick Start**
-
-### **Prerequisites**
-- Node.js 18+ 
-- MongoDB 7+
+### Prerequisites
+- Node.js (v16 or higher)
+- MongoDB (local or Atlas)
 - npm or yarn
 
-### **Installation**
+### � **Quick Start**
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/menu-app.git
+   git clone <your-repo-url>
    cd menu-app
+   git checkout branch2  # Switch to the latest branch
    ```
 
 2. **Install dependencies**
    ```bash
-   # Install root dependencies
    npm install
-   
-   # Install backend dependencies
-   cd backend && npm install
-   
-   # Install frontend dependencies
-   cd ../frontend && npm install
+   cd frontend && npm install
+   cd ../backend && npm install
    ```
 
-3. **Environment Setup**
+3. **Add your images** (Important!)
    ```bash
-   # Backend - Copy and configure
-   cd backend
-   cp .env.example .env
-   # Edit .env with your MongoDB URI and JWT secret
-   
-   # Frontend - Create environment file if needed
-   cd ../frontend
-   # Create .env.local for any frontend environment variables
+   # Add your menu item images to:
+   frontend/public/images/et-yemekleri/
+   frontend/public/images/makarnalar/
+   frontend/public/images/salatalar/
+   frontend/public/images/alkolsuz-icecekler/
+   # etc... (see RESIM-REHBERI.md for details)
    ```
 
-4. **Add Product Images** (Optional)
+4. **Environment setup**
    ```bash
-   # Create image directories in frontend/public/images/
-   # See frontend/public/images/RESIM-REHBERI.md for structure
+   # Create backend/.env file:
+   MONGODB_URI=mongodb://localhost:27017/menu-app
+   JWT_SECRET=your-jwt-secret-here
+   PORT=5000
    ```
 
-5. **Start Development Servers**
+5. **Start the application**
    ```bash
-   # Terminal 1 - Backend (from root)
+   # Terminal 1 - Backend
    cd backend && npm run dev
    
-   # Terminal 2 - Frontend (from root)  
+   # Terminal 2 - Frontend  
    cd frontend && npm run dev
    ```
 
-6. **Access the Application**
+6. **Access the application**
    - Frontend: http://localhost:5173
    - Backend API: http://localhost:5000
+   - Admin Panel: http://localhost:5173/admin
 
-## 📱 **Usage**
+### �🔮 Planned Features
+- Order management system
+- Payment integration
+- Email notifications
+- Advanced admin dashboard
+- File upload for menu images
+- Real-time notifications
 
-### **For Users**
-1. Browse menu items by category
-2. Search for specific items
-3. View detailed item information
-4. Switch between light/dark themes
+## 🛠️ Tech Stack
 
-### **For Admins**
-1. Navigate to `/admin` route
-2. Access "Menü Yönetimi" (Menu Management)
-3. Add, edit, or delete menu items
-4. Toggle item active/inactive status
-5. Filter and search through items
-
-## 🎯 **What's New in v2.0**
-
-### **Major Improvements**
-- ✅ **Complete codebase cleanup** - Removed all dev-only utilities
-- ✅ **Real image system** - Switched from placeholder to actual images
-- ✅ **Admin panel** - Full-featured menu management interface
-- ✅ **Persistent preferences** - localStorage for user settings
-- ✅ **Enhanced UX** - React Icons, better theming, smooth animations
-- ✅ **Production ready** - Clean, maintainable, scalable codebase
-
-### **Technical Debt Resolved**
-- Removed development-only hooks and utilities
-- Simplified image loading without complex optimization
-- Cleaned up console logging and debugging code
-- Standardized component patterns and naming
-
-## 🤝 **Contributing**
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 **License**
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 **Acknowledgments**
-
-- Built with modern web technologies
-- Responsive design principles
-- Accessibility-first approach
-- Performance optimized
-
----
-
-**Note**: Product images are not included in this repository. Please add your own images following the structure outlined in `frontend/public/images/RESIM-REHBERI.md`.
-- **React Router** - Navigation
+### Frontend
+- **React 18** - UI framework with hooks
+- **Redux Toolkit** - State management
+- **Vite** - Fast build tool
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **React Router** - Client-side routing
+- **React Icons** - Icon library
 
 ### Backend
 - **Node.js** - Runtime environment
 - **Express.js** - Web framework
-- **MongoDB** - Database
+- **MongoDB** - NoSQL database
 - **Mongoose** - ODM for MongoDB
 - **JWT** - Authentication
 - **bcryptjs** - Password hashing

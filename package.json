@@ -1,7 +1,7 @@
 {
   "name": "menu-app",
-  "version": "2.0.0",
-  "description": "A modern restaurant menu application built with MERN stack - Complete with admin panel and real image management",
+  "version": "1.0.0",
+  "description": "A restaurant menu application built with MERN stack",
   "scripts": {
     "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "cd frontend && npm run dev",
@@ -10,9 +10,7 @@
     "start": "cd backend && npm start",
     "install:frontend": "cd frontend && npm install",
     "install:backend": "cd backend && npm install",
-    "install:all": "npm run install:frontend && npm run install:backend",
-    "clean": "cd frontend && rm -rf dist node_modules && cd ../backend && rm -rf node_modules",
-    "setup": "npm run install:all"
+    "install:all": "npm run install:frontend && npm run install:backend"
   },
   "keywords": [
     "react",
