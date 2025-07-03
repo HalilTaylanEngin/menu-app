@@ -1,0 +1,28 @@
+{
+  "name": "menu-app",
+  "version": "1.0.0",
+  "description": "A restaurant menu application starter project built with React and Tailwind CSS",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview"
+  },
+  "keywords": [
+    "react",
+    "tailwind",
+    "vite",
+    "restaurant",
+    "menu",
+    "starter"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/menu-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/menu-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/menu-app#readme"
+}
