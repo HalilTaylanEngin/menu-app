@@ -1,9 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from "../context/ThemeContext";
 import { FiGrid, FiUsers, FiSettings, FiBarChart2, FiPackage } from "react-icons/fi";
 
 const Admin = () => {
   const { themeClasses } = useTheme();
+  const navigate = useNavigate();
+
+  const handleSectionClick = (sectionId) => {
+    if (sectionId === 'menu-management') {
+      navigate('/admin/menu-management');
+    }
+  };
 
   const adminSections = [
     {
@@ -12,7 +20,7 @@ const Admin = () => {
       description: 'Ürünleri ekle, düzenle ve sil',
       icon: FiPackage,
       color: 'bg-blue-500',
-      comingSoon: true
+      comingSoon: false
     },
     {
       id: 'orders',
@@ -77,6 +85,7 @@ const Admin = () => {
                   ? 'opacity-60 cursor-not-allowed' 
                   : 'hover:scale-105 hover:shadow-lg cursor-pointer active:scale-95'
               } ${themeClasses.bgPrimary} ${themeClasses.border}`}
+              onClick={() => !section.comingSoon && handleSectionClick(section.id)}
             >
               <div className="flex items-start space-x-3">
                 {/* Icon */}

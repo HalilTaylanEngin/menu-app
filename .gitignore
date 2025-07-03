@@ -25,6 +25,15 @@ Thumbs.db
 # Logs
 *.log
 
+# Database
+*.db
+*.sqlite
+
+# Images - Not sharing actual product images
+frontend/public/images/
+!frontend/public/images/README.md
+!frontend/public/images/RESIM-REHBERI.md
+
 # Bower dependency directory (https://bower.io/)
 bower_components
 

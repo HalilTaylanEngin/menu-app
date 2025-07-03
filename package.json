@@ -1,28 +1,45 @@
 {
   "name": "menu-app",
-  "version": "1.0.0",
-  "description": "A restaurant menu application starter project built with React and Tailwind CSS",
+  "version": "2.0.0",
+  "description": "A modern restaurant menu application built with MERN stack - Complete with admin panel and real image management",
   "scripts": {
-    "dev": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
     "build": "cd frontend && npm run build",
-    "preview": "cd frontend && npm run preview"
+    "start": "cd backend && npm start",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm run install:frontend && npm run install:backend",
+    "clean": "cd frontend && rm -rf dist node_modules && cd ../backend && rm -rf node_modules",
+    "setup": "npm run install:all"
   },
   "keywords": [
     "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "mern",
     "tailwind",
     "vite",
     "restaurant",
-    "menu",
-    "starter"
+    "menu"
   ],
-  "author": "Your Name",
+  "author": "Halil Taylan Engin",
   "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/menu-app.git"
+    "url": "git+https://github.com/HalilTaylanEngin/menu-app.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/menu-app/issues"
+    "url": "https://github.com/HalilTaylanEngin/menu-app/issues"
   },
-  "homepage": "https://github.com/yourusername/menu-app#readme"
+  "homepage": "https://github.com/HalilTaylanEngin/menu-app#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "react-redux": "^9.2.0"
+  }
 }
